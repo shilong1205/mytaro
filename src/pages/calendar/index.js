@@ -65,18 +65,18 @@ export default class Index extends Component {
                         </Picker>
                     </View>
                     <View className="content">
-                        <View className="text"><View>具体日期:</View>{list.date}</View>
-                        <View className="text"><View>农历:</View>{list.lunar}</View>
-                        <View className="text"><View>纪年:</View>{list.lunarYear}</View>
-                        <View className="text"><View>属相:</View>{list.animalsYear}</View>
-                        <View className="text"><View>宜:</View>{list.suit}</View>
-                        <View className="text"><View>忌:</View>{list.avoid}</View>
+                        <View className="text">具体日期:{list.date}</View>
+                        <View className="text">农历:{list.lunar}</View>
+                        <View className="text">纪年:{list.lunarYear}</View>
+                        <View className="text">属相:{list.animalsYear}</View>
+                        <View className="text">宜:{list.suit}</View>
+                        <View className="text">忌:{list.avoid}</View>
                         <View className="text">{list.weekday}</View>
                         {
-                            list.holiday && <View className="text"><View>假日:</View>{list.holiday}</View>
+                            list.holiday && <View className="text">假日:{list.holiday}</View>
                         }
                         {
-                            list.desc && <View className="text"><View>假日描述:</View>{list.desc}</View>
+                            list.desc && <View className="text">假日描述:{list.desc}</View>
                         }
                         
                         

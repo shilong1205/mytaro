@@ -64,7 +64,3 @@ page,.wrapper{
         -ms-flex-align: center;
             align-items: center;
 }
-.text>view{
-    margin-right: 10rpx;
-}
-

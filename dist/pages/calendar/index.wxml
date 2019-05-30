@@ -9,26 +9,18 @@
                 </picker>
             </view>
             <view class="content">
-                <view class="text">
-                    <view>具体日期:</view>{{list.date}}</view>
-                <view class="text">
-                    <view>农历:</view>{{list.lunar}}</view>
-                <view class="text">
-                    <view>纪年:</view>{{list.lunarYear}}</view>
-                <view class="text">
-                    <view>属相:</view>{{list.animalsYear}}</view>
-                <view class="text">
-                    <view>宜:</view>{{list.suit}}</view>
-                <view class="text">
-                    <view>忌:</view>{{list.avoid}}</view>
+                <view class="text">具体日期:{{list.date}}</view>
+                <view class="text">农历:{{list.lunar}}</view>
+                <view class="text">纪年:{{list.lunarYear}}</view>
+                <view class="text">属相:{{list.animalsYear}}</view>
+                <view class="text">宜:{{list.suit}}</view>
+                <view class="text">忌:{{list.avoid}}</view>
                 <view class="text">{{list.weekday}}</view>
                 <block wx:if="{{list.holiday}}">
-                    <view class="text">
-                        <view>假日:</view>{{list.holiday}}</view>
+                    <view class="text">假日:{{list.holiday}}</view>
                 </block>
                 <block wx:if="{{list.desc}}">
-                    <view class="text">
-                        <view>假日描述:</view>{{list.desc}}</view>
+                    <view class="text">假日描述:{{list.desc}}</view>
                 </block>
             </view>
         </view>
