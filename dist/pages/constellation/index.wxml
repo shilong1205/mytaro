@@ -1,0 +1,11 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="wrapper">
+        <view class="main">
+            <view wx:key="id" class="item" bindtap="clickItem" wx:for="{{constellation}}" wx:for-item="item" wx:for-index="i" data-e-tap-so="this" data-e-tap-a-a="{{item}}">
+                <image src="{{item.img}}"></image>
+                <view>{{item.name}}</view>
+                <view>{{item.date}}</view>
+            </view>
+        </view>
+    </view>
+</block>

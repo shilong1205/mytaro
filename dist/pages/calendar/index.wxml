@@ -1,0 +1,36 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="wrapper">
+        <view class="main">
+            <view class="section">
+                <picker mode="date" value="{{newDate}}" bindchange="DateChange" data-e-change-so="this">
+                    <view class="picker">当前日期: {{year + '年' + month + '月' + date + '日'}}
+                        <image src="{{arrows}}"></image>
+                    </view>
+                </picker>
+            </view>
+            <view class="content">
+                <view class="text">
+                    <view>具体日期:</view>{{list.date}}</view>
+                <view class="text">
+                    <view>农历:</view>{{list.lunar}}</view>
+                <view class="text">
+                    <view>纪年:</view>{{list.lunarYear}}</view>
+                <view class="text">
+                    <view>属相:</view>{{list.animalsYear}}</view>
+                <view class="text">
+                    <view>宜:</view>{{list.suit}}</view>
+                <view class="text">
+                    <view>忌:</view>{{list.avoid}}</view>
+                <view class="text">{{list.weekday}}</view>
+                <block wx:if="{{list.holiday}}">
+                    <view class="text">
+                        <view>假日:</view>{{list.holiday}}</view>
+                </block>
+                <block wx:if="{{list.desc}}">
+                    <view class="text">
+                        <view>假日描述:</view>{{list.desc}}</view>
+                </block>
+            </view>
+        </view>
+    </view>
+</block>

@@ -1,0 +1,176 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="wrapper">
+        <view class="header">
+            <view class="{{index === i ? 'active' : ''}}" wx:key="id" bindtap="clickDate" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{index}}" data-e-tap-a-b="{{item.date}}">{{item.title}}</view>
+        </view>
+        <view class="main">
+            <block>
+                <block wx:if="{{i === 0}}">
+                    <view class="today">
+                        <view class="head">{{content.QFriend}}今日运势</view>
+                        <view class="datetime">日期: {{content.datetime}}</view>
+                        <view class="content">
+                            <image src="{{items.img}}"></image>
+                            <view class="content-right">
+                                <view class="item">
+                                    <view>健康指数</view>
+                                    <view class="progress-bar">
+                                        <view style="{{anonymousState__temp}}"></view>
+                                    </view>
+                                    <view>{{content.health}}</view>
+                                </view>
+                                <view class="item">
+                                    <view>爱情指数</view>
+                                    <view class="progress-bar">
+                                        <view style="{{anonymousState__temp2}}"></view>
+                                    </view>
+                                    <view>{{content.love}}</view>
+                                </view>
+                                <view class="item">
+                                    <view>财运指数</view>
+                                    <view class="progress-bar">
+                                        <view style="{{anonymousState__temp3}}"></view>
+                                    </view>
+                                    <view>{{content.money}}</view>
+                                </view>
+                                <view class="item">
+                                    <view>工作指数</view>
+                                    <view class="progress-bar">
+                                        <view style="{{anonymousState__temp4}}"></view>
+                                    </view>
+                                    <view>{{content.work}}</view>
+                                </view>
+                                <view class="item">
+                                    <view>综合指数</view>
+                                    <view class="progress-bar">
+                                        <view style="{{anonymousState__temp5}}"></view>
+                                    </view>
+                                    <view>{{content.all}}</view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="text">今日概述:{{content.summary}}</view>
+                        <view class="good-fortune">
+                            <view>
+                                <view>{{content.color}}</view>
+                                <view>幸运色</view>
+                            </view>
+                            <view>
+                                <view>{{content.number}}</view>
+                                <view>幸运数字</view>
+                            </view>
+                            <view>
+                                <view>{{content.QFriend}}</view>
+                                <view>速配星座</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <block>
+                        <block wx:if="{{i === 1}}">
+                            <view class="tomorrow">
+                                <view class="head">{{content.QFriend}}明日运势</view>
+                                <view class="datetime">日期: {{content.datetime}}</view>
+                                <view class="content">
+                                    <image src="{{items.img}}"></image>
+                                    <view class="content-right">
+                                        <view class="item">
+                                            <view>健康指数</view>
+                                            <view class="progress-bar">
+                                                <view style="{{anonymousState__temp6}}"></view>
+                                            </view>
+                                            <view>{{content.health}}</view>
+                                        </view>
+                                        <view class="item">
+                                            <view>爱情指数</view>
+                                            <view class="progress-bar">
+                                                <view style="{{anonymousState__temp7}}"></view>
+                                            </view>
+                                            <view>{{content.love}}</view>
+                                        </view>
+                                        <view class="item">
+                                            <view>财运指数</view>
+                                            <view class="progress-bar">
+                                                <view style="{{anonymousState__temp8}}"></view>
+                                            </view>
+                                            <view>{{content.money}}</view>
+                                        </view>
+                                        <view class="item">
+                                            <view>工作指数</view>
+                                            <view class="progress-bar">
+                                                <view style="{{anonymousState__temp9}}"></view>
+                                            </view>
+                                            <view>{{content.work}}</view>
+                                        </view>
+                                        <view class="item">
+                                            <view>综合指数</view>
+                                            <view class="progress-bar">
+                                                <view style="{{anonymousState__temp10}}"></view>
+                                            </view>
+                                            <view>{{content.all}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                                <view class="text">今日概述:{{content.summary}}</view>
+                                <view class="good-fortune">
+                                    <view>
+                                        <view>{{content.color}}</view>
+                                        <view>幸运色</view>
+                                    </view>
+                                    <view>
+                                        <view>{{content.number}}</view>
+                                        <view>幸运数字</view>
+                                    </view>
+                                    <view>
+                                        <view>{{content.QFriend}}</view>
+                                        <view>速配星座</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </block>
+                        <block wx:else>
+                            <block>
+                                <block wx:if="{{i === 2}}">
+                                    <view class="week">
+                                        <view class="head">{{content.name}}本周运势</view>
+                                        <view class="datetime">日期: {{content.date}}</view>
+                                        <view class="text">{{content.love}}</view>
+                                        <view class="text">{{content.money}}</view>
+                                        <view class="text">{{content.work}}</view>
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <block>
+                                        <block wx:if="{{i === 3}}">
+                                            <view class="month">
+                                                <view class="head">{{content.name}}本月运势</view>
+                                                <view class="datetime">日期: {{content.date}}</view>
+                                                <view class="text">爱情运势:{{content.love}}</view>
+                                                <view class="text">财运运势:{{content.money}}</view>
+                                                <view class="text">工作运势:{{content.work}}</view>
+                                                <view class="text">健康运势:{{content.health}}</view>
+                                                <view class="text">综合运势:{{content.all}}</view>
+                                            </view>
+                                        </block>
+                                        <block wx:else>
+                                            <view class="year">
+                                                <view class="head">{{content.name}}本年运势</view>
+                                                <view class="datetime">日期: {{content.date}}</view>
+                                                <view class="text">概述:{{content.mima.info}}</view>
+                                                <view class="text">说明:{{content.mima.text}}</view>
+                                                <view class="text">事业运:{{content.career[0]}}</view>
+                                                <view class="text">感情运:{{content.love[0]}}</view>
+                                                <view class="text">财运:{{content.finance[0]}}</view>
+                                            </view>
+                                        </block>
+                                    </block>
+                                </block>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>

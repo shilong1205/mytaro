@@ -1,0 +1,20 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="wrapper">
+        <view class="search">
+            <input placeholder="梦到了什么?" value="{{text}}" bindinput="inputValue" data-e-input-so="this" />
+            <view bindtap="clickSearch" class="searchbtn" data-e-tap-so="this">
+                <image class="iconsearch" src="{{sousuo}}"></image>
+                <view>搜索</view>
+            </view>
+        </view>
+        <view class="content">
+            <block wx:if="{{list.length}}">
+                <view class="item" wx:key="i" bindtap="clickItem" wx:for="{{list}}" wx:for-item="item" wx:for-index="i" data-e-tap-so="this" data-e-tap-a-a="{{item}}">{{item.title}}</view>
+            </block>
+        </view>
+        <view class="habitude" bindtap="clickHabitude" data-e-tap-so="this">
+            <view>民间</view>
+            <view>习俗</view>
+        </view>
+    </view>
+</block>
